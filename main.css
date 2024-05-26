@@ -25,7 +25,7 @@ a {
   margin: 20rem auto;
 }
 
-.stat-primary span{
+.stat-primary span {
   font-size: 4rem;
 }
 
@@ -35,12 +35,13 @@ a {
 
 .stat-primary {
   background-color: #7000ff;
-  padding: 2rem;
+  padding:3rem 2rem;
   border-radius: 6px;
+  margin-bottom: 2rem;
 }
 
 .stat-secondary {
-  padding: 2rem;
+  padding: 3rem 2rem;
   border: 1px solid #2e2e2e;
   border-radius: 6px;
 }
@@ -79,6 +80,7 @@ button {
   color: #fff;
   font-size: 2rem;
   font-weight: 500;
+  margin-bottom: 2rem;
 }
 
 .note {
@@ -94,14 +96,20 @@ button {
     margin-bottom: 0;
   }
 
-  .wrapper{
+  .wrapper {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
   }
 
-  .stat-primary{
-    flex: .5;
+  .stat {
+    flex: 1;
+    display: flex;
+    gap: 2rem;
+  }
+
+  .stat-primary {
+    flex: .4;
     margin-bottom: 0;
     display: flex;
     align-items: center;
@@ -109,8 +117,8 @@ button {
     justify-content: space-around;
   }
 
-  .stat-secondary{
-    flex: 1;
+  .stat-secondary {
+    flex: 1.2;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -124,25 +132,47 @@ button {
     margin-right: 1rem;
   }
 
-  .note{
-   width: 50%;
-   margin: 0 auto;
+  .cta {
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .note {
+    align-self: center;
+  }
+
+  button {
+    margin-bottom: 0;
   }
 }
 
-
-@media only screen and (min-width:64em){
-  .wrapper{
+@media only screen and (min-width: 64em) {
+  .wrapper {
     flex-wrap: nowrap;
   }
+  /* .stat{
+    flex: 1.8;
+  }
 
-  button{
+  .cta{
+    flex: .2;
+  } */
+
+  button {
     align-self: flex-start;
     width: auto;
     padding-inline: 4rem;
   }
-  .note{
-    display: inline-block;
-    width: 20%;
-   }
+
+  .cta {
+    flex-basis: 22%;
+    justify-content: space-between;
+  }
+
+  .note {
+   text-align: left;
+  }
+  
 }
