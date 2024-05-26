@@ -1,15 +1,148 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
 }
 
-html{
+html {
   font-size: 62.5%;
   box-sizing: border-box;
 }
 
-a{
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #181818;
+  color: #fff;
+}
+
+a {
   text-decoration: none;
 }
 
+.wrapper {
+  width: 80%;
+  max-width: 1200px;
+  margin: 20rem auto;
+}
+
+.stat-primary span{
+  font-size: 4rem;
+}
+
+.wrapper > *:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.stat-primary {
+  background-color: #7000ff;
+  padding: 2rem;
+  border-radius: 6px;
+}
+
+.stat-secondary {
+  padding: 2rem;
+  border: 1px solid #2e2e2e;
+  border-radius: 6px;
+}
+
+.stat-secondary__page > *,
+.stat-secondary__visitor > * {
+  display: inline-block;
+}
+
+.stat-secondary__page {
+  margin-bottom: 2rem;
+}
+
+span {
+  font-size: 3rem;
+  font-weight: 700;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+p {
+  font: 1.8rem;
+  text-transform: uppercase;
+}
+
+.stat-secondary img {
+  margin-right: 2rem;
+}
+
+button {
+  background-color: #7000ff;
+  border: none;
+  width: 100%;
+  padding-block: 1.5rem;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.note {
+  text-transform: none;
+  text-align: center;
+  color: #878787;
+  font-size: 1.4rem;
+  line-height: 130%;
+}
+
+@media only screen and (min-width: 48em) {
+  .wrapper > *:not(:last-child) {
+    margin-bottom: 0;
+  }
+
+  .wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .stat-primary{
+    flex: .5;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .stat-secondary{
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .stat-secondary__page {
+    margin-bottom: 0;
+  }
+
+  .stat-secondary img {
+    margin-right: 1rem;
+  }
+
+  .note{
+   width: 50%;
+   margin: 0 auto;
+  }
+}
+
+
+@media only screen and (min-width:64em){
+  .wrapper{
+    flex-wrap: nowrap;
+  }
+
+  button{
+    align-self: flex-start;
+    width: auto;
+    padding-inline: 4rem;
+  }
+  .note{
+    display: inline-block;
+    width: 20%;
+   }
+}
